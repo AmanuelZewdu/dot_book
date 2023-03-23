@@ -14,6 +14,26 @@ import service from "./Services/services";
 import { Table, Spin } from "antd";
 
 function MyVerticallyCenteredModal(props) {
+  const [title, setTitle] = useState("");
+  const [publisher, setPublisher] = useState("");
+  const [isbn, setIsbn] = useState("0001");
+  const [shelfno, setSelfno] = useState("");
+
+  const [quantity, setQuantity] = useState("");
+
+  const addBook = async (e) => {
+    const response = await service.addBook(
+      title,
+      publisher,
+      isbn,
+      quantity,
+      shelfno
+    );
+    if (response) {
+      window.alert("Book Successfully Created");
+    }
+  };
+
   return (
     <Modal
       {...props}
@@ -34,26 +54,42 @@ function MyVerticallyCenteredModal(props) {
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Title</Form.Label>
-              <Form.Control type="text" placeholder="Enter Book Title" />
+              <Form.Control
+                type="text"
+                placeholder="Enter Book Title"
+                onChange={(e) => setTitle(e.target.value)}
+              />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Publisher</Form.Label>
-              <Form.Control type="text" placeholder="Enter Publisher" />
+              <Form.Control
+                type="text"
+                placeholder="Enter Publisher"
+                onChange={(e) => setPublisher(e.target.value)}
+              />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Shelf Number</Form.Label>
-              <Form.Control type="text" placeholder="Enter Shelf Number" />
+              <Form.Control
+                type="text"
+                placeholder="Enter Shelf Number"
+                onChange={(e) => setSelfno(e.target.value)}
+              />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Quantity</Form.Label>
-              <Form.Control type="text" placeholder="Enter Quantity" />
+              <Form.Control
+                type="text"
+                placeholder="Enter Quantity"
+                onChange={(e) => setQuantity(e.target.value)}
+              />
             </Form.Group>
           </div>
         </Form>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" onClick={addBook}>
           Submit
         </Button>
       </Modal.Footer>
@@ -64,6 +100,7 @@ function MyVerticallyCenteredModal(props) {
 function App() {
   const [modalShow, setModalShow] = useState(false);
   const [book, setBook] = useState([]);
+  const [booktitle, setbookName] = useState("");
 
   const fetchBooks = async (e) => {
     const response = await service.getBooks();
