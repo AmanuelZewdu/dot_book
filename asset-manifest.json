@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dot_book/book-app/static/css/main.756af292.css",
-    "main.js": "/dot_book/book-app/static/js/main.767150b3.js",
-    "static/js/787.fb67f53c.chunk.js": "/dot_book/book-app/static/js/787.fb67f53c.chunk.js",
-    "static/media/logo.svg": "/dot_book/book-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/dot_book/book-app/index.html",
-    "main.756af292.css.map": "/dot_book/book-app/static/css/main.756af292.css.map",
-    "main.767150b3.js.map": "/dot_book/book-app/static/js/main.767150b3.js.map",
-    "787.fb67f53c.chunk.js.map": "/dot_book/book-app/static/js/787.fb67f53c.chunk.js.map"
+    "main.css": "/dot_book/static/css/main.756af292.css",
+    "main.js": "/dot_book/static/js/main.b4fc91c0.js",
+    "static/js/787.fb67f53c.chunk.js": "/dot_book/static/js/787.fb67f53c.chunk.js",
+    "static/media/logo.svg": "/dot_book/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/dot_book/index.html",
+    "main.756af292.css.map": "/dot_book/static/css/main.756af292.css.map",
+    "main.b4fc91c0.js.map": "/dot_book/static/js/main.b4fc91c0.js.map",
+    "787.fb67f53c.chunk.js.map": "/dot_book/static/js/787.fb67f53c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.756af292.css",
-    "static/js/main.767150b3.js"
+    "static/js/main.b4fc91c0.js"
   ]
 }
